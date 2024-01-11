@@ -7,12 +7,8 @@ namespace Task2
     {
         static string SplitAndReverseText(string text)
         {
-            string[] WordArray = text.Split(' ');
-            return Reverse(WordArray);
-        }
+            string[] WordArray = SplitText(text);
 
-        static string Reverse(string[] WordArray)
-        {
             string ResultString = "";
             foreach (string word in WordArray.Reverse())
             {
@@ -20,6 +16,11 @@ namespace Task2
             }
             return ResultString;
         }
+        static string[] SplitText(string text)
+        {
+            return text.Split(' ');
+        }
+
 
         static void Main()
         {
