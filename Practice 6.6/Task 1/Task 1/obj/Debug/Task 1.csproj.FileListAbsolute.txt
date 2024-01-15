@@ -1,0 +1,7 @@
+C:\Users\Mankaev_r\Documents\GitHub\Skillbox\Practice 6.6\Task 1\Task 1\bin\Debug\Task 1.exe.config
+C:\Users\Mankaev_r\Documents\GitHub\Skillbox\Practice 6.6\Task 1\Task 1\bin\Debug\Task 1.exe
+C:\Users\Mankaev_r\Documents\GitHub\Skillbox\Practice 6.6\Task 1\Task 1\bin\Debug\Task 1.pdb
+C:\Users\Mankaev_r\Documents\GitHub\Skillbox\Practice 6.6\Task 1\Task 1\obj\Debug\Task 1.csproj.AssemblyReference.cache
+C:\Users\Mankaev_r\Documents\GitHub\Skillbox\Practice 6.6\Task 1\Task 1\obj\Debug\Task 1.csproj.CoreCompileInputs.cache
+C:\Users\Mankaev_r\Documents\GitHub\Skillbox\Practice 6.6\Task 1\Task 1\obj\Debug\Task 1.exe
+C:\Users\Mankaev_r\Documents\GitHub\Skillbox\Practice 6.6\Task 1\Task 1\obj\Debug\Task 1.pdb
