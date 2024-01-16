@@ -31,14 +31,23 @@ namespace Task_1
 
         static void ReadData()
         {
+            string fileName = "EmployeesData.txt";
             string line = "";
-            using (StreamReader sr = new StreamReader("EmployeesData.txt"))
+            if (System.IO.File.Exists(fileName))
             {
-                while ((line = sr.ReadLine()) != null)
+                using (StreamReader sr = new StreamReader(fileName))
                 {
-                    Console.WriteLine(line.Replace("#", " "));
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        Console.WriteLine(line.Replace("#", " "));
+                    }
                 }
             }
+            else
+            {
+                Console.WriteLine("Файл не существует");
+            }
+
         }
 
         static void WriteData()
@@ -61,6 +70,7 @@ namespace Task_1
             }
             else
             {
+
                 ReadData();
             }
 
