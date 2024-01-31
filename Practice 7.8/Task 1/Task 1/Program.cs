@@ -32,7 +32,16 @@ namespace Task_1
             {
                 case "Add":
                     Console.WriteLine("Введите имя нового сотрудника");
-                    Worker worker = new Worker(Console.ReadLine());
+                    string name = Console.ReadLine();
+                    Console.WriteLine("Введите возраст сотрудника");
+                    int age = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Введите рост сотрудника");
+                    int height = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Введите дату рождения в формате гггг.мм.дд");
+                    DateTime birthDate = DateTime.Parse(Console.ReadLine());
+                    Console.WriteLine("Введите место рождения");
+                    string birthPlace = Console.ReadLine();
+                    Worker worker = new Worker(name, age, height, birthDate, birthPlace);
                     repository.AddWorker(worker);
                     break;
                 case "Del":

@@ -18,28 +18,15 @@ namespace Task_1
             this.DateOfBirth = DateOfBirth;
         }
 
-        public Worker(string Name)
+        public Worker(string Name, int Age, int Height, DateTime DateOfBirth, string PlaceOfBirth) :
+            this(0, Name, Age, Height, DateOfBirth, PlaceOfBirth)
         {
-            this.Id = 0;
-            this.AddTime = DateTime.Now;
-            this.Name = Name;
-            this.Height = 0;
-            this.Age = 0;
-            this.PlaceOfBirth = "г. Москва";
-            this.DateOfBirth = new DateTime(1900, 01, 01);
 
         }
 
-        public Worker(string Name, DateTime DateOfBirth)
-        {
-            this.Id = 0;
-            this.AddTime = DateTime.Now;
-            this.Name = Name;
-            this.Height = 0;
-            this.Age = 0;
-            this.PlaceOfBirth = "г. Москва";
-            this.DateOfBirth = DateOfBirth;
-
+        public Worker(string Name):
+            this(0, Name, 0, 0, new DateTime(1900, 01, 01), "г. Москва")
+        { 
         }
 
         public int Id { get; set; }
