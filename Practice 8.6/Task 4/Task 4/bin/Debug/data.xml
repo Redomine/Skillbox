@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Data name="W W W">
+  <Address>
+    <Street>s</Street>
+    <HouseNumber>20202</HouseNumber>
+    <FlatNumber>2</FlatNumber>
+  </Address>
+  <Phones>
+    <MobilePhone>df3453453</MobilePhone>
+    <FlatPhone>34123</FlatPhone>
+  </Phones>
+</Data>nes>
+</Data><?xml version="1.0" encoding="utf-8"?>
+<Data name="s s s">
+  <Address>
+    <Street>sdfsdf</Street>
+    <HouseNumber>2</HouseNumber>
+    <FlatNumber>4</FlatNumber>
+  </Address>
+  <Phones>
+    <MobilePhone>2433242342e</MobilePhone>
+    <FlatPhone>232323232323</FlatPhone>
+  </Phones>
+</Data>

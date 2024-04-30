@@ -1,0 +1,7 @@
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 8.6\Task 4\Task 4\bin\Debug\Task 4.exe.config
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 8.6\Task 4\Task 4\bin\Debug\Task 4.exe
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 8.6\Task 4\Task 4\bin\Debug\Task 4.pdb
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 8.6\Task 4\Task 4\obj\Debug\Task 4.csproj.AssemblyReference.cache
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 8.6\Task 4\Task 4\obj\Debug\Task 4.csproj.CoreCompileInputs.cache
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 8.6\Task 4\Task 4\obj\Debug\Task 4.exe
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 8.6\Task 4\Task 4\obj\Debug\Task 4.pdb
