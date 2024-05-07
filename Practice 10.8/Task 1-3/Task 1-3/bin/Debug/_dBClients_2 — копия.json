@@ -1,0 +1,24 @@
+[
+  {
+    "FirstName": "Name1",
+    "SecondName": "SecondName1",
+    "Surname": "Surname1",
+    "PhoneNumber": "Number1",
+    "PassportNumber": "Number1",
+    "ChangesDate": "Null",
+    "NameOfChangedData": "Null",
+    "TypeOfChanges": "Null",
+    "AutorOfChanges": "Null"
+  },
+  {
+    "FirstName": "Name2",
+    "SecondName": "SecondName2",
+    "Surname": "Surname2",
+    "PhoneNumber": "Number2",
+    "PassportNumber": "Number2",
+    "ChangesDate": "Null",
+    "NameOfChangedData": "Null",
+    "TypeOfChanges": "Null",
+    "AutorOfChanges": "Null"
+  }
+]

@@ -1,0 +1,24 @@
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\obj\Debug\Task 1-3.csproj.AssemblyReference.cache
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\obj\Debug\MainWindow.g.cs
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\obj\Debug\App.g.cs
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\obj\Debug\Task 1-3_MarkupCompile.cache
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\obj\Debug\Task 1-3_MarkupCompile.lref
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\bin\Debug\Task 1-3.exe.config
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\bin\Debug\Task 1-3.exe
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\bin\Debug\Task 1-3.pdb
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\bin\Debug\Newtonsoft.Json.dll
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\bin\Debug\Newtonsoft.Json.xml
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\obj\Debug\MainWindow.baml
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\obj\Debug\Task 1-3.g.resources
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\obj\Debug\Task_1_3.Properties.Resources.resources
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\obj\Debug\Task 1-3.csproj.GenerateResource.cache
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\obj\Debug\Task 1-3.csproj.CoreCompileInputs.cache
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\obj\Debug\Task 1-3.csproj.CopyComplete
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\obj\Debug\Task 1-3.exe
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\obj\Debug\Task 1-3.pdb
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\obj\Debug\Windows\ChangePhone.g.cs
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\obj\Debug\Windows\ChangePhone.baml
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\obj\Debug\Windows\CreateClient.g.cs
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\obj\Debug\Windows\EditClient.g.cs
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\obj\Debug\Windows\CreateClient.baml
+C:\Users\roman\Documents\GitHub\Skillbox\Practice 10.8\Task 1-3\Task 1-3\obj\Debug\Windows\EditClient.baml
