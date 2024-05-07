@@ -163,8 +163,16 @@ namespace Task_1_3.Classes
                 NameOfChangedData = "Вся строка"
             };
 
-            clients.Add(client);
-            SerializeClientsToJson(clients);
+            if (client.FirstName == "" || client.SecondName == "" || client.Surname == "" || client.PassportNumber == "" || client.PhoneNumber == "")
+            {
+                MessageBox.Show("Должны быть значения для всех параметров");
+            }
+            else
+            {
+                clients.Add(client);
+                SerializeClientsToJson(clients);
+            }
+
         }
 
     }
