@@ -117,7 +117,7 @@ namespace Task_1.Model
         /// <summary>
         /// Редактирует только номер телефона
         /// </summary>
-        private void EditPhone(ChangePhone newDialog, Client client, IEmployee worker)
+        private void ChangePhoneNumber(ChangePhone newDialog, Client client, IEmployee worker)
         {
             string phoneNumber = newDialog.PhoneNumber.Text;
             string nameOfChanged = "";
@@ -140,7 +140,7 @@ namespace Task_1.Model
         /// <summary>
         /// Редактирует всю строку данных из ListView
         /// </summary>
-        private void EditRow(EditClient newDialog, Client client, IEmployee worker)
+        private void ChangeClientDetails(EditClient newDialog, Client client, IEmployee worker)
         {
             string firstName = newDialog.FirstName.Text;
             string secondName = newDialog.SecondName.Text;
@@ -178,13 +178,13 @@ namespace Task_1.Model
                 {
                     ChangePhone newDialog = new ChangePhone();
                     NewWindowAsDialog(mainWindow, newDialog);
-                    EditPhone(newDialog, client, worker);
+                    ChangePhoneNumber(newDialog, client, worker);
                 }
                 else
                 {
                     EditClient newDialog = new EditClient();
                     NewWindowAsDialog(mainWindow, newDialog);
-                    EditRow(newDialog, client, worker);
+                    ChangeClientDetails(newDialog, client, worker);
                 }
             }
             mainWindow.lvClients.ItemsSource = ClientsDb;
