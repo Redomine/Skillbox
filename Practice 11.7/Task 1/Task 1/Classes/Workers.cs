@@ -9,42 +9,38 @@ namespace Task_1.Classes
 {
     internal class Workers
     {
-        internal class Consultant : IEmployee
+
+        internal class Worker : IEmployee
+        {
+
+            internal string levelOfAcces;
+            internal string workerName = "Консультант";
+            public string LevelOfAccess
+            {
+                get { return levelOfAcces; }
+            }
+            public string WorkerName
+            {
+                get { return workerName; }
+            }
+        }
+
+        internal class Consultant : Worker
         {
             public Consultant()
             {
-                levelOfAcces = "0";
+                this.levelOfAcces = "0";
+                this.workerName = "Консультант";
             }
-            private readonly string levelOfAcces;
-            private readonly string workerName = "Консультант";
-            public string LevelOfAccess
-            {
-                get { return levelOfAcces; }
-            }
-            public string WorkerName
-            {
-                get { return workerName; }
-            }
-
         }
-        internal class Manager : IEmployee
+
+        internal class Manager : Worker
         {
             public Manager()
             {
-                levelOfAcces = "1";
+                this.levelOfAcces = "1";
+                this.workerName = "Менеджер";
             }
-            private readonly string workerName = "Менеджер";
-            private readonly string levelOfAcces;
-            public string LevelOfAccess
-            {
-                get { return levelOfAcces; }
-            }
-
-            public string WorkerName
-            {
-                get { return workerName; }
-            }
-
         }
     }
 }

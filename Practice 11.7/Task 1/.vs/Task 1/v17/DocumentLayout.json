@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|c:\\users\\mankaev_r\\desktop\\github\\skillbox\\practice 11.7\\task 1\\task 1\\classes\\workers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|solutionrelative:task 1\\classes\\workers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\task 1\\classes\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|solutionrelative:task 1\\classes\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|c:\\users\\mankaev_r\\desktop\\github\\skillbox\\practice 11.7\\task 1\\task 1\\classes\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|solutionrelative:task 1\\classes\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\task 1\\windows\\editclient.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|solutionrelative:task 1\\windows\\editclient.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\task 1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|solutionrelative:task 1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\task 1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|solutionrelative:task 1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\task 1\\windows\\changephone.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|solutionrelative:task 1\\windows\\changephone.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\task 1\\windows\\changephone.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|solutionrelative:task 1\\windows\\changephone.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Workers.cs",
+              "DocumentMoniker": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\Task 1\\Classes\\Workers.cs",
+              "RelativeDocumentMoniker": "Task 1\\Classes\\Workers.cs",
+              "ToolTip": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\Task 1\\Classes\\Workers.cs",
+              "RelativeToolTip": "Task 1\\Classes\\Workers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T11:22:34.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\Task 1\\Classes\\Repository.cs",
+              "RelativeDocumentMoniker": "Task 1\\Classes\\Repository.cs",
+              "ToolTip": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\Task 1\\Classes\\Repository.cs",
+              "RelativeToolTip": "Task 1\\Classes\\Repository.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAACYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T11:22:25.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\Task 1\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Task 1\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\Task 1\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Task 1\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAeAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADjSURBVDhPY0AGretv/t9x7tl/KJd0sOfii/\u002Bimfv\u002Bbzv7lGhDGBlid2Eo1pTkZNiSLsVQWVkJFWFgYGdnZygoKGAwNjZmhAphgt0XnsFd8P79\u002B/9Pnz6F47CwsP/R0dH/z549i2IhE5QGg1P3PzMsTtVgsFTiYvj27RtUFAF\u002B//7N0NfXx4BsCIoBIVoMDOaKnFg1wwDIkAkTJkB5oDBAAnFxcf/b29uhPNygsLCQYdWqVWC9KC748eMHlEU8QDGAHDBqABUMQEkHmZmZ/9\u002B\u002BfQvl4QbCwsIM06dPx50niAcMDADfJl5g9BqhpwAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-05-14T11:22:24.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\Task 1\\Classes\\Client.cs",
+              "RelativeDocumentMoniker": "Task 1\\Classes\\Client.cs",
+              "ToolTip": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\Task 1\\Classes\\Client.cs",
+              "RelativeToolTip": "Task 1\\Classes\\Client.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAUwD8AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T11:22:24.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ChangePhone.xaml",
+              "DocumentMoniker": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\Task 1\\Windows\\ChangePhone.xaml",
+              "RelativeDocumentMoniker": "Task 1\\Windows\\ChangePhone.xaml",
+              "ToolTip": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\Task 1\\Windows\\ChangePhone.xaml",
+              "RelativeToolTip": "Task 1\\Windows\\ChangePhone.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-14T11:22:24.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\Task 1\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Task 1\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\Task 1\\MainWindow.xaml",
+              "RelativeToolTip": "Task 1\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-14T11:22:25.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ChangePhone.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\Task 1\\Windows\\ChangePhone.xaml.cs",
+              "RelativeDocumentMoniker": "Task 1\\Windows\\ChangePhone.xaml.cs",
+              "ToolTip": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\Task 1\\Windows\\ChangePhone.xaml.cs",
+              "RelativeToolTip": "Task 1\\Windows\\ChangePhone.xaml.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAswCYAAAANAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADjSURBVDhPY0AGretv/t9x7tl/KJd0sOfii/\u002Bimfv\u002Bbzv7lGhDGBlid2Eo1pTkZNiSLsVQWVkJFWFgYGdnZygoKGAwNjZmhAphgt0XnsFd8P79\u002B/9Pnz6F47CwsP/R0dH/z549i2IhE5QGg1P3PzMsTtVgsFTiYvj27RtUFAF\u002B//7N0NfXx4BsCIoBIVoMDOaKnFg1wwDIkAkTJkB5oDBAAnFxcf/b29uhPNygsLCQYdWqVWC9KC748eMHlEU8QDGAHDBqABUMQEkHmZmZ/9\u002B\u002BfQvl4QbCwsIM06dPx50niAcMDADfJl5g9BqhpwAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-05-14T11:22:25.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EditClient.xaml",
+              "DocumentMoniker": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\Task 1\\Windows\\EditClient.xaml",
+              "RelativeDocumentMoniker": "Task 1\\Windows\\EditClient.xaml",
+              "ToolTip": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\Practice 11.7\\Task 1\\Task 1\\Windows\\EditClient.xaml",
+              "RelativeToolTip": "Task 1\\Windows\\EditClient.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-14T11:22:25.318Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
