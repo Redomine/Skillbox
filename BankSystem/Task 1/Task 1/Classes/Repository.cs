@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -27,12 +28,17 @@ namespace Task_1.Model
 
         public ObservableCollection<Client> ClientsDb { get; set; }
 
+        List<Account> VariantsOfAcc {  get; set; }
+
+        List<Account> VariantsOfTargetAcc { get; set; }
+
+        List<Account> TargetsDb { get; set; }
+
         public ObservableCollection<ReguralBankAccount> BankAccountsDb { get; set; }
 
         public ObservableCollection<DepositBankAccount> DepoBankAccountsDb { get; set; }
 
         public List<IEmployee> Workers { get; set; }
-
 
         public Repository()
         {
@@ -46,6 +52,125 @@ namespace Task_1.Model
                 manager,
                 consultant
             };
+        }
+
+        public void FillBankWindowData(BankAccountWindow window)
+        {
+            if (window.ActiveAccount != null)
+            {
+                Account activeAcc = window.ActiveAccount.SelectedItem as Account;
+               
+                ReguralBankAccount regularAccount = BankAccountsDb[window.ActiveAccount.SelectedIndex];
+                DepositBankAccount depoAccount = DepoBankAccountsDb[window.ActiveAccount.SelectedIndex];
+
+                window.CurrentAccValue.Content = regularAccount.MoneyValue.ToString();
+                window.CurrentAccDepoValue.Content = depoAccount.MoneyValue.ToString();
+
+                VariantsOfAcc = CreateVariantsOfAcc(activeAcc.Id);
+            }
+        }
+        public void CreateBoxes(BankAccountWindow window)
+        {
+            CreateComboBoxSource<Account>(window.IsDepoOrRegural, "AccName", 0, VariantsOfAcc);
+            //
+
+            TargetsDb = new List<Account>();
+            foreach (Account acc in BankAccountsDb)
+            {
+                if (acc != window.ActiveAccount.SelectedItem) { TargetsDb.Add(acc); }
+            }
+
+            CreateComboBoxSource<Account>(window.TargetAccount, "FullName", 0, TargetsDb);
+            Account targetAcc = window.TargetAccount.SelectedItem as Account;
+            VariantsOfTargetAcc = CreateVariantsOfAcc(targetAcc.Id);
+
+            CreateComboBoxSource<Account>(window.TargetIsDepoOrRegural, "AccName", 0, VariantsOfTargetAcc);
+
+
+        }
+
+        public void RefreshBankWindow(BankAccountWindow window)
+        {
+            Account activeAccount = (Account)window.ActiveAccount.SelectedItem;
+            Account targetAcc = window.TargetAccount.SelectedItem as Account;
+            if (activeAccount != null)
+            {
+                FillBankWindowData(window);
+
+                int id = activeAccount.Id;
+                window.IsDepoOrRegural.ItemsSource = CreateVariantsOfAcc(id);
+                if(window.IsDepoOrRegural.SelectedIndex == -1) { window.IsDepoOrRegural.SelectedIndex = 0; }
+                BlockButtons(window);
+            }
+
+            if (targetAcc != null)
+            {
+                int targetId = targetAcc.Id;
+                window.TargetIsDepoOrRegural.ItemsSource = CreateVariantsOfAcc(targetId);
+                if (window.TargetIsDepoOrRegural.SelectedIndex == -1) { window.TargetIsDepoOrRegural.SelectedIndex = 0; }
+            }
+
+        }
+
+        private List<Account> CreateVariantsOfAcc(int id)
+        {
+            ReguralBankAccount regularAccount = null;
+            DepositBankAccount depoAccount = null;
+
+            foreach(ReguralBankAccount regAcc in BankAccountsDb)
+            {
+                if(regAcc.Id == id) { regularAccount = regAcc; }
+            }
+            foreach (DepositBankAccount depAcc in DepoBankAccountsDb)
+            {
+                if (depAcc.Id == id) { depoAccount = depAcc; }
+            }
+
+            List<Account> variantsOfAcc = new List<Account>()
+                {
+                    regularAccount,
+                    depoAccount
+                };
+            return variantsOfAcc;
+
+        }
+
+        public void BlockButtons(BankAccountWindow window)
+        {
+
+            Account activeAccount = (Account)window.IsDepoOrRegural.SelectedItem;
+            if (activeAccount != null)
+            {
+                window.CloseAccountButton.IsEnabled = activeAccount.IsAccountOpen;
+                if (window.CloseAccountButton.IsEnabled == false)
+                {
+                    window.OpenAccountButton.IsEnabled = true;
+                }
+                else
+                {
+                    window.OpenAccountButton.IsEnabled = false;
+                }
+                window.AddMoney.IsEnabled = activeAccount.IsAccountOpen;
+            }
+
+        }
+        public void OpenCloseAccount(BankAccountWindow window)
+        {
+            Account account = (Account)window.IsDepoOrRegural.SelectedItem;
+
+            if (account.isAccountOpen == false)
+            {
+                account.isAccountOpen = true;
+            }
+            else
+            {
+                account.isAccountOpen = false;
+            }
+
+            //MessageBox.Show(account.AccName + account.FullName);
+            SerializeClientsToJson<ReguralBankAccount>(BankAccountsDb, dbBankAccountsName);
+            SerializeClientsToJson<DepositBankAccount>(DepoBankAccountsDb, dbDepoBankAccountsName);
+            FillBankWindowData(window);
         }
 
         public void AddMoney(BankAccountWindow window)
@@ -85,72 +210,6 @@ namespace Task_1.Model
             }
         }
 
-        private List<Account> CreateVariantsOfAcc(int index)
-        {
-            if (index == -1) { index = 0; }
-            ReguralBankAccount regularAccount = BankAccountsDb[index];
-            DepositBankAccount depoAccount = DepoBankAccountsDb[index];
-            List<Account> variantsOfAcc = new List<Account>()
-                {
-                    regularAccount,
-                    depoAccount
-                };
-            return variantsOfAcc;
-
-        }
-
-        public void FillBankWindowData (BankAccountWindow window) 
-        {
-            if (window.ActiveAccount != null)
-            {
-                int indexOfAcc = window.IsDepoOrRegural.SelectedIndex;
-                int indexOfTargetAcc = window.TargetIsDepoOrRegural.SelectedIndex;
-
-                ReguralBankAccount regularAccount = BankAccountsDb[window.ActiveAccount.SelectedIndex];
-                DepositBankAccount depoAccount = DepoBankAccountsDb[window.ActiveAccount.SelectedIndex];
-
-
-                window.CurrentAccValue.Content = regularAccount.MoneyValue.ToString();
-                window.CurrentAccDepoValue.Content = depoAccount.MoneyValue.ToString();
-                List<Account> variantsOfAcc = CreateVariantsOfAcc(indexOfAcc);
-                List<Account> variantsOfTargetAcc = CreateVariantsOfAcc(indexOfTargetAcc);
-
-                //data.CreateComboBoxSource<ReguralBankAccount>(ActiveAccount, "FullName", 0, data.BankAccountsDb.ToList());
-                List<Account> targets = new List<Account>();
-
-                foreach(Account acc in BankAccountsDb)
-                {
-                    if(acc != window.ActiveAccount.SelectedItem) { targets.Add(acc); }
-                }
-
-                CreateComboBoxSource<Account>(window.TargetAccount, "FullName", 0, targets);
-                CreateComboBoxSource<Account>(window.IsDepoOrRegural, "AccName", indexOfAcc, variantsOfAcc);
-                CreateComboBoxSource<Account>(window.TargetIsDepoOrRegural, "AccName", indexOfTargetAcc, targets);
-
-
-                BlockButtons(window);
-            }
-
-
-        }
-
-        private void BlockButtons(BankAccountWindow window)
-        {
-            Account activeAccount = (Account)window.IsDepoOrRegural.SelectedItem;
-            window.CloseAccountButton.IsEnabled = activeAccount.IsAccountOpen;
-            if (window.CloseAccountButton.IsEnabled == false)
-            {
-                window.OpenAccountButton.IsEnabled = true;
-            }
-            else
-            {
-                window.OpenAccountButton.IsEnabled = false;
-            }
-            window.AddMoney.IsEnabled = activeAccount.IsAccountOpen;
-        }
-
-
-
         public void CreateComboBoxSource<T>(ComboBox comboBox, string displayMemberPath, int selectedIndex, List<T> items)
         {
             if (selectedIndex == -1)
@@ -169,24 +228,6 @@ namespace Task_1.Model
             SerializeClientsToJson(accountDb, dbName);
         }
 
-        public void OpenCloseAccount(BankAccountWindow window)
-        {
-            Account account = (Account)window.IsDepoOrRegural.SelectedItem;
-            
-            if (account.isAccountOpen == false)
-            {
-                account.isAccountOpen = true;
-            }
-            else
-            { 
-                account.isAccountOpen = false;
-            }
-
-            //MessageBox.Show(account.AccName + account.FullName);
-            SerializeClientsToJson<ReguralBankAccount>(BankAccountsDb, dbBankAccountsName);
-            SerializeClientsToJson<DepositBankAccount>(DepoBankAccountsDb, dbDepoBankAccountsName);
-            FillBankWindowData(window);
-        }
 
         public void NewWindowAsDialog(Window mainWindow, Window newDialog)
         {

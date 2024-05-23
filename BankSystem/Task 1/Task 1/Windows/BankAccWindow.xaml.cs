@@ -29,42 +29,23 @@ namespace Task_1.Windows
             data = mainData;
             data.CreateComboBoxSource<ReguralBankAccount>(ActiveAccount, "FullName", 0, data.BankAccountsDb.ToList());
             data.FillBankWindowData(this);
-            //data.RefreshComboBox(this);
+            data.CreateBoxes(this);
+            data.BlockButtons(this);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            data.FillBankWindowData(this);
-            //data.RefreshComboBox(this);
-        }
 
         private void OpenAcc(object sender, RoutedEventArgs e)
         {
             data.OpenCloseAccount(this);
-            data.FillBankWindowData(this);
+            data.RefreshBankWindow(this);
         }
 
         private void CloseAcc(object sender, RoutedEventArgs e)
         {
             data.OpenCloseAccount(this);
-            data.FillBankWindowData(this);
+            data.RefreshBankWindow(this);
         }
 
-        private void IsDepoOrRegural_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            data.FillBankWindowData(this);
-            //data.RefreshComboBox(this);
-        }
 
         private void AddMoney_Click(object sender, RoutedEventArgs e)
         {
@@ -74,6 +55,20 @@ namespace Task_1.Windows
         private void Send_Money_Button(object sender, RoutedEventArgs e)
         {
             data.SendMoney(this);
+        }
+
+        private void TargetAccount_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            data.RefreshBankWindow(this);
+        }
+
+        private void ActiveAccount_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            data.RefreshBankWindow(this);
+        }
+        private void IsDepoOrRegural_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            data.RefreshBankWindow(this);
         }
     }
 }

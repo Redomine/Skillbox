@@ -64,7 +64,7 @@
                   Grid.Row="1" 
                   VerticalAlignment="Top" 
                   Width="120" 
-                  Height="22"/>
+                  Height="22" SelectionChanged="TargetAccount_SelectionChanged"/>
         <Label Content="=&gt;" 
                HorizontalAlignment="Left" 
                Margin="153,39,0,0" 
@@ -111,7 +111,7 @@
                   Name ="ActiveAccount"
                   Margin="147,39,0,0" 
                   VerticalAlignment="Top" 
-                  Width="120" SelectionChanged="ComboBox_SelectionChanged" Height="22"/>
+                  Width="120" SelectionChanged="ActiveAccount_SelectionChanged" Height="22"/>
         <ComboBox HorizontalAlignment="Left" 
                   Name="IsDepoOrRegural"
                   Margin="15,156,0,0" 
