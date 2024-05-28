@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -72,7 +73,6 @@ namespace Task_1.Model
         public void CreateBoxes(BankAccountWindow window)
         {
             CreateComboBoxSource<Account>(window.IsDepoOrRegural, "AccName", 0, VariantsOfAcc);
-            //
 
             TargetsDb = new List<Account>();
             foreach (Account acc in BankAccountsDb)
@@ -83,7 +83,6 @@ namespace Task_1.Model
             CreateComboBoxSource<Account>(window.TargetAccount, "FullName", 0, TargetsDb);
             Account targetAcc = window.TargetAccount.SelectedItem as Account;
             VariantsOfTargetAcc = CreateVariantsOfAcc(targetAcc.Id);
-
             CreateComboBoxSource<Account>(window.TargetIsDepoOrRegural, "AccName", 0, VariantsOfTargetAcc);
 
 
@@ -100,6 +99,15 @@ namespace Task_1.Model
                 int id = activeAccount.Id;
                 window.IsDepoOrRegural.ItemsSource = CreateVariantsOfAcc(id);
                 if(window.IsDepoOrRegural.SelectedIndex == -1) { window.IsDepoOrRegural.SelectedIndex = 0; }
+
+                TargetsDb = new List<Account>();
+                foreach (Account acc in BankAccountsDb)
+                {
+                    if (acc != window.ActiveAccount.SelectedItem) { TargetsDb.Add(acc); }
+                }
+
+                CreateComboBoxSource<Account>(window.TargetAccount, "FullName", 0, TargetsDb);
+
                 BlockButtons(window);
             }
 
@@ -167,19 +175,17 @@ namespace Task_1.Model
                 account.isAccountOpen = false;
             }
 
-            //MessageBox.Show(account.AccName + account.FullName);
             SerializeClientsToJson<ReguralBankAccount>(BankAccountsDb, dbBankAccountsName);
             SerializeClientsToJson<DepositBankAccount>(DepoBankAccountsDb, dbDepoBankAccountsName);
             FillBankWindowData(window);
         }
 
-        public void AddMoney(BankAccountWindow window)
+        private void ExchangeMoney(BankAccountWindow window, Account activeAcc, Account targetAcc, string moneySource)
         {
-            Account account = (Account)window.IsDepoOrRegural.SelectedItem;
-
-            if(int.TryParse(window.MoneyValue.Text, out int number))
+            MoneyExchanger exchanger = new MoneyExchanger();
+            if (int.TryParse(moneySource, out int number))
             {
-                account.PutMoneyInto(number);
+                exchanger.ExchageMoney(activeAcc, targetAcc, number);
                 FillBankWindowData(window);
                 SerializeClientsToJson<ReguralBankAccount>(BankAccountsDb, dbBankAccountsName);
                 SerializeClientsToJson<DepositBankAccount>(DepoBankAccountsDb, dbDepoBankAccountsName);
@@ -188,26 +194,21 @@ namespace Task_1.Model
             {
                 MessageBox.Show("Введите целое число");
             }
-            
+        }
+
+
+
+        public void AddMoney(BankAccountWindow window)
+        {
+            Account account = (Account)window.IsDepoOrRegural.SelectedItem;
+            ExchangeMoney(window, account, account, window.MoneyValue.Text);
         }
 
         public void SendMoney(BankAccountWindow window)
         {
             Account account = (Account)window.IsDepoOrRegural.SelectedItem;
             Account targetAccount = (Account)window.TargetIsDepoOrRegural.SelectedItem;
-
-            if (int.TryParse(window.TargetMoneyValue.Text, out int number))
-            {
-                account.TakeMoneyFrom(number);
-                targetAccount.PutMoneyInto(number);
-                FillBankWindowData(window);
-                SerializeClientsToJson<ReguralBankAccount>(BankAccountsDb, dbBankAccountsName);
-                SerializeClientsToJson<DepositBankAccount>(DepoBankAccountsDb, dbDepoBankAccountsName);
-            }
-            else
-            {
-                MessageBox.Show("Введите целое число");
-            }
+            ExchangeMoney(window, account, targetAccount, window.TargetMoneyValue.Text);
         }
 
         public void CreateComboBoxSource<T>(ComboBox comboBox, string displayMemberPath, int selectedIndex, List<T> items)

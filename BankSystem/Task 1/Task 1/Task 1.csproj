@@ -62,8 +62,8 @@
     </ApplicationDefinition>
     <Compile Include="Classes\BankAccounts.cs" />
     <Compile Include="Classes\Workers.cs" />
-    <Compile Include="Interfaces\IBankAccount.cs" />
     <Compile Include="Interfaces\IEmployee.cs" />
+    <Compile Include="Interfaces\IMoneyExchanger.cs" />
     <Compile Include="Windows\EditClientWindow.xaml.cs">
       <DependentUpon>EditClientWindow.xaml</DependentUpon>
     </Compile>

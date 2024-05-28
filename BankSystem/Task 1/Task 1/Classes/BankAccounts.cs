@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using Task_1.Interfaces;
 
 namespace Task_1.Classes
 {
@@ -74,6 +76,24 @@ namespace Task_1.Classes
             this.moneyValue = 0;
             this.FullName = fullName;
             this.accName = "Депозитный аккаунт";
+        }
+    }
+
+    internal class MoneyExchanger : IMoneyExchanger<Account, string>
+    {
+        public string GetReport(Account targetAccount)
+        {
+            return $"Новый баланс аккаунта {targetAccount.FullName} равен {targetAccount.MoneyValue}";
+        }
+
+        public void ExchageMoney(Account activeAccount, Account targetAccount, int moneyValue)
+        {
+            if(activeAccount != targetAccount)
+            {
+                activeAccount.TakeMoneyFrom(moneyValue);
+            }
+            targetAccount.PutMoneyInto(moneyValue);
+            MessageBox.Show(GetReport(targetAccount));
         }
     }
 

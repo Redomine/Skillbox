@@ -42,5 +42,10 @@ namespace Task_1.Classes
                 this.workerName = "Менеджер";
             }
         }
+
+
+
+
+
     }
 }
