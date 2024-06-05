@@ -33,7 +33,9 @@ namespace Task_1
         {
             InitializeComponent();
             data = Repository.CreateRepository();
+            
             data.CreateComboBoxSource<IEmployee>(WorkerName, "WorkerName", 1, data.Workers);
+            data.currentWorker = data.Workers[WorkerName.SelectedIndex];
             lvClients.ItemsSource = data.ClientsDb;
         }
 

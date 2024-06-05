@@ -1,7 +1,32 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\BankSystem\\Task 1\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|c:\\users\\mankaev_r\\desktop\\github\\skillbox\\banksystem\\task 1\\task 1\\windows\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|solutionrelative:task 1\\windows\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|c:\\users\\mankaev_r\\desktop\\github\\skillbox\\banksystem\\task 1\\task 1\\classes\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|solutionrelative:task 1\\classes\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|c:\\users\\mankaev_r\\desktop\\github\\skillbox\\banksystem\\task 1\\task 1\\windows\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|solutionrelative:task 1\\windows\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|c:\\users\\mankaev_r\\desktop\\github\\skillbox\\banksystem\\task 1\\task 1\\classes\\bankaccounts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|solutionrelative:task 1\\classes\\bankaccounts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|c:\\users\\mankaev_r\\desktop\\github\\skillbox\\banksystem\\task 1\\task 1\\interfaces\\imoneyexchanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|solutionrelative:task 1\\interfaces\\imoneyexchanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|c:\\users\\mankaev_r\\desktop\\github\\skillbox\\banksystem\\task 1\\task 1\\classes\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89457F3C-6181-4DC7-AAE0-FD5127132730}|Task 1\\Task 1.csproj|solutionrelative:task 1\\classes\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +34,88 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\BankSystem\\Task 1\\Task 1\\Windows\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Task 1\\Windows\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\BankSystem\\Task 1\\Task 1\\Windows\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Task 1\\Windows\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAADIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T09:50:10.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\BankSystem\\Task 1\\Task 1\\Windows\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Task 1\\Windows\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\BankSystem\\Task 1\\Task 1\\Windows\\MainWindow.xaml",
+              "RelativeToolTip": "Task 1\\Windows\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-05T09:50:06.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IMoneyExchanger.cs",
+              "DocumentMoniker": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\BankSystem\\Task 1\\Task 1\\Interfaces\\IMoneyExchanger.cs",
+              "RelativeDocumentMoniker": "Task 1\\Interfaces\\IMoneyExchanger.cs",
+              "ToolTip": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\BankSystem\\Task 1\\Task 1\\Interfaces\\IMoneyExchanger.cs",
+              "RelativeToolTip": "Task 1\\Interfaces\\IMoneyExchanger.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T09:48:31.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\BankSystem\\Task 1\\Task 1\\Classes\\Client.cs",
+              "RelativeDocumentMoniker": "Task 1\\Classes\\Client.cs",
+              "ToolTip": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\BankSystem\\Task 1\\Task 1\\Classes\\Client.cs",
+              "RelativeToolTip": "Task 1\\Classes\\Client.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T08:55:01.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BankAccounts.cs",
+              "DocumentMoniker": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\BankSystem\\Task 1\\Task 1\\Classes\\BankAccounts.cs",
+              "RelativeDocumentMoniker": "Task 1\\Classes\\BankAccounts.cs",
+              "ToolTip": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\BankSystem\\Task 1\\Task 1\\Classes\\BankAccounts.cs",
+              "RelativeToolTip": "Task 1\\Classes\\BankAccounts.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAcwHUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T08:47:32.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\BankSystem\\Task 1\\Task 1\\Classes\\Repository.cs",
+              "RelativeDocumentMoniker": "Task 1\\Classes\\Repository.cs",
+              "ToolTip": "C:\\Users\\mankaev_r\\Desktop\\GitHub\\Skillbox\\BankSystem\\Task 1\\Task 1\\Classes\\Repository.cs",
+              "RelativeToolTip": "Task 1\\Classes\\Repository.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAASwMwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T08:45:22.595Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -10,7 +10,7 @@ namespace Task_1.Interfaces
     {
 
         K GetReport(T targetAccount);
-        void ExchageMoney(T activeAccount, T targetAccount, int moneyValue);
+        void ExchageMoney(T activeAccount, T targetAccount, int moneyValue, IEmployee worker);
 
     }
 }

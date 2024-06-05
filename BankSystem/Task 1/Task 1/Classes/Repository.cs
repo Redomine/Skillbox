@@ -29,6 +29,8 @@ namespace Task_1.Model
         private readonly string dbDepoBankAccountsName = "_dBDepositBankAccounts.json";
         private readonly string dbEventLog = "_dBEventLog.txt";
 
+        public IEmployee currentWorker;
+
         public ObservableCollection<Client> ClientsDb { get; set; }
 
         List<Account> VariantsOfAcc {  get; set; }
@@ -188,7 +190,7 @@ namespace Task_1.Model
             if (int.TryParse(moneySource, out int number))
             {
                 exchanger.Notify += KeepAnEventLog;
-                exchanger.ExchageMoney(activeAcc, targetAcc, number);
+                exchanger.ExchageMoney(activeAcc, targetAcc, number, currentWorker);
                 
                 FillBankWindowData(window);
                 SerializeClientsToJson<ReguralBankAccount>(BankAccountsDb, dbBankAccountsName);
@@ -279,6 +281,7 @@ namespace Task_1.Model
                 button.Visibility = Visibility.Visible;
                 passportColumn.DisplayMemberBinding = new Binding("PassportNumber");
             }
+            currentWorker = worker;
         }
 
 
@@ -361,7 +364,9 @@ namespace Task_1.Model
                                 { "PassportNumber", passportNumber },
                             };
             Client dbClient = FindClient(ClientsDb, client.Id);
-            nameOfChanged = ReplacePartOfClientsDb(nameOfChanged, dbClient, paraNamesParaValues);
+            AccountClientFactory factory = new AccountClientFactory();
+            factory.Notify += KeepAnEventLog;
+            nameOfChanged = factory.ReplacePartOfClientsDb(nameOfChanged, dbClient, paraNamesParaValues, worker);
             if (nameOfChanged != "")
             {
                 dbClient.AutorOfChanges = worker.WorkerName;
@@ -376,13 +381,20 @@ namespace Task_1.Model
 
         public void EditClient(MainWindow mainWindow, Client client, IEmployee worker)
         {
+            AccountClientFactory accountClientFactory = new AccountClientFactory();
+            accountClientFactory.Notify += KeepAnEventLog;
+            
             if (client != null) 
             {
+                Client dbClient = FindClient(ClientsDb, client.Id);
                 if (worker.LevelOfAccess == "0")
                 {
                     ChangePhone newDialog = new ChangePhone();
                     NewWindowAsDialog(mainWindow, newDialog);
-                    ChangePhoneNumber(newDialog, client, worker);
+                    //ChangePhoneNumber(newDialog, client, worker);
+                    accountClientFactory.EditPhone(newDialog, dbClient, worker);
+                    SerializeClientsToJson(ClientsDb, dbName);
+                    ClientsDb = DeserializeClientsFromJson<Client>(dbName);
                 }
                 else
                 {
@@ -407,11 +419,11 @@ namespace Task_1.Model
                 ClientsDb.Add(newClient);
 
                 string fullName = GetFullName(newClient);
-                AccountFactory accountFactory = new AccountFactory();
+                AccountClientFactory accountFactory = new AccountClientFactory();
                 accountFactory.Notify += KeepAnEventLog;
 
 
-                List<Account> accList = accountFactory.CreateAccounts(newClient.Id, fullName);
+                List<Account> accList = accountFactory.CreateAccounts(newClient.Id, fullName, worker);
                 DepositBankAccount newDepositBankAccount = accList[0] as DepositBankAccount;
                 ReguralBankAccount newReguralBankAccount = accList[1] as ReguralBankAccount;
 
