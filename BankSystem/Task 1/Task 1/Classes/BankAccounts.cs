@@ -105,7 +105,6 @@ namespace Task_1.Classes
             if(activeAccount == targetAccount)
             {
                 Notify?.Invoke($"{activeAccount.AccName} с Id {activeAccount.Id} был пополнен на {moneyValue}");
-                MessageBox.Show("1");
             }
             else 
             {
