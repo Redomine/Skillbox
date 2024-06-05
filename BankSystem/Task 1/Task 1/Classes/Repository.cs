@@ -13,6 +13,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Markup;
+using System.Windows.Shapes;
 using Task_1.Classes;
 using Task_1.Classes.Task_1_3;
 using Task_1.Interfaces;
@@ -26,6 +27,7 @@ namespace Task_1.Model
         private readonly string dbName = "_dBClients.json";
         private readonly string dbBankAccountsName = "_dBBankAccounts.json";
         private readonly string dbDepoBankAccountsName = "_dBDepositBankAccounts.json";
+        private readonly string dbEventLog = "_dBEventLog.txt";
 
         public ObservableCollection<Client> ClientsDb { get; set; }
 
@@ -185,7 +187,9 @@ namespace Task_1.Model
             MoneyExchanger exchanger = new MoneyExchanger();
             if (int.TryParse(moneySource, out int number))
             {
+                exchanger.Notify += KeepAnEventLog;
                 exchanger.ExchageMoney(activeAcc, targetAcc, number);
+                
                 FillBankWindowData(window);
                 SerializeClientsToJson<ReguralBankAccount>(BankAccountsDb, dbBankAccountsName);
                 SerializeClientsToJson<DepositBankAccount>(DepoBankAccountsDb, dbDepoBankAccountsName);
@@ -201,6 +205,7 @@ namespace Task_1.Model
         public void AddMoney(BankAccountWindow window)
         {
             Account account = (Account)window.IsDepoOrRegural.SelectedItem;
+            
             ExchangeMoney(window, account, account, window.MoneyValue.Text);
         }
 
@@ -226,8 +231,10 @@ namespace Task_1.Model
         public void CreateBankAccount<T>(ObservableCollection<T> accountDb, T newAccount, string dbName)
         {
             accountDb.Add(newAccount);
+            
             SerializeClientsToJson(accountDb, dbName);
         }
+
 
 
         public void NewWindowAsDialog(Window mainWindow, Window newDialog)
@@ -236,6 +243,14 @@ namespace Task_1.Model
             newDialog.ShowDialog();
         }
 
+        private void KeepAnEventLog(string messege)
+        {
+            using (StreamWriter writer = new StreamWriter(dbEventLog, true))
+            {
+                writer.WriteLine(messege);
+            }
+
+        }
         private ObservableCollection<T> DeserializeClientsFromJson<T>(string dbAdress)
         {
             string json = File.ReadAllText(dbAdress);
@@ -385,37 +400,71 @@ namespace Task_1.Model
             EditClient newDialog = new EditClient();
             NewWindowAsDialog(mainWindow, newDialog);
 
+            if (AreAllFieldsFilled(newDialog) && newDialog.editable)
+            {
+                Client newClient = CreateNewClient(newDialog, worker);
+
+                ClientsDb.Add(newClient);
+
+                string fullName = GetFullName(newClient);
+                AccountFactory accountFactory = new AccountFactory();
+                accountFactory.Notify += KeepAnEventLog;
+
+
+                List<Account> accList = accountFactory.CreateAccounts(newClient.Id, fullName);
+                DepositBankAccount newDepositBankAccount = accList[0] as DepositBankAccount;
+                ReguralBankAccount newReguralBankAccount = accList[1] as ReguralBankAccount;
+
+
+                CreateBankAccount<ReguralBankAccount>(BankAccountsDb, newReguralBankAccount, dbBankAccountsName);
+                CreateBankAccount<DepositBankAccount>(DepoBankAccountsDb, newDepositBankAccount, dbDepoBankAccountsName);
+
+                SerializeClientsToJson(ClientsDb, dbName);
+                ClientsDb = DeserializeClientsFromJson<Client>(dbName);
+
+                mainWindow.lvClients.Items.Refresh();
+            }
+            else
+            {
+                ShowErrorMessage();
+            }
+        }
+
+        private bool AreAllFieldsFilled(EditClient newDialog)
+        {
             string firstName = newDialog.FirstName.Text;
             string secondName = newDialog.SecondName.Text;
             string surName = newDialog.SurName.Text;
             string phoneNumber = newDialog.PhoneNumber.Text;
             string passportNumber = newDialog.PassportNumber.Text;
 
-            if (((firstName ?? secondName ?? surName ?? phoneNumber ?? passportNumber) == "") & newDialog.editable)
-            {
-                MessageBox.Show("Должны быть заполнены все поля");
-            }
-            else
-            {
-                if (newDialog.editable)
-                {
-                    Client newClient = new Client(firstName, secondName, surName, phoneNumber, passportNumber)
-                    {
-                        TypeOfChanges = "Добавление строки",
-                        AutorOfChanges = worker.WorkerName,
-                        NameOfChangedData = "Вся строка"
-                    };
+            return !((firstName ?? secondName ?? surName ?? phoneNumber ?? passportNumber) == "");
+        }
 
-                    ClientsDb.Add(newClient);
+        private Client CreateNewClient(EditClient newDialog, IEmployee worker)
+        {
+            string firstName = newDialog.FirstName.Text;
+            string secondName = newDialog.SecondName.Text;
+            string surName = newDialog.SurName.Text;
+            string phoneNumber = newDialog.PhoneNumber.Text;
+            string passportNumber = newDialog.PassportNumber.Text;
 
-                    string fullName = String.Join(" ", new[] { newClient.FirstName, newClient.SecondName, newClient.SurName });
-                    CreateBankAccount<ReguralBankAccount>(BankAccountsDb, new ReguralBankAccount(newClient.Id, fullName), dbBankAccountsName);
-                    CreateBankAccount<DepositBankAccount>(DepoBankAccountsDb, new DepositBankAccount(newClient.Id, fullName), dbDepoBankAccountsName);
-                    SerializeClientsToJson(ClientsDb, dbName);
-                    ClientsDb = DeserializeClientsFromJson<Client>(dbName);
-                    mainWindow.lvClients.Items.Refresh();
-                }
-            }
+            return new Client(firstName, secondName, surName, phoneNumber, passportNumber)
+            {
+                TypeOfChanges = "Добавление строки",
+                AutorOfChanges = worker.WorkerName,
+                NameOfChangedData = "Вся строка"
+            };
+        }
+
+        private string GetFullName(Client newClient)
+        {
+            return String.Join(" ", new[] { newClient.FirstName, newClient.SecondName, newClient.SurName });
+        }
+
+        private void ShowErrorMessage()
+        {
+            MessageBox.Show("Должны быть заполнены все поля");
         }
 
         private void Sort(string sortBy, ListSortDirection direction, ListView lvClients)
