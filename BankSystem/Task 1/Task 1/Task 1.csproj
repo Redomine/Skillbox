@@ -60,20 +60,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Classes\BankAccounts.cs" />
-    <Compile Include="Classes\Workers.cs" />
-    <Compile Include="Interfaces\IEmployee.cs" />
-    <Compile Include="Interfaces\IMoneyExchanger.cs" />
-    <Compile Include="Windows\EditClientWindow.xaml.cs">
+    <Compile Include="Model\AccountClientFactory.cs" />
+    <Compile Include="Model\BankAccounts.cs" />
+    <Compile Include="Model\DbOperator.cs" />
+    <Compile Include="Model\MoneyExchanger.cs" />
+    <Compile Include="Model\Workers.cs" />
+    <Compile Include="Model\Interfaces\IEmployee.cs" />
+    <Compile Include="Model\Interfaces\IMoneyExchanger.cs" />
+    <Compile Include="ViewModel\BankOperator.cs" />
+    <Compile Include="ViewModel\ListSorter.cs" />
+    <Compile Include="ViewModel\ClientOperator.cs" />
+    <Compile Include="View\EditClientWindow.xaml.cs">
       <DependentUpon>EditClientWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ChangePhoneWindow.xaml.cs">
+    <Compile Include="View\ChangePhoneWindow.xaml.cs">
       <DependentUpon>ChangePhoneWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\BankAccWindow.xaml.cs">
+    <Compile Include="View\BankAccWindow.xaml.cs">
       <DependentUpon>BankAccWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="Windows\MainWindow.xaml">
+    <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -81,26 +87,26 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Classes\Client.cs" />
-    <Compile Include="Windows\MainWindow.xaml.cs">
+    <Compile Include="Model\Client.cs" />
+    <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Windows\EditClientWindow.xaml">
+    <Page Include="View\EditClientWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\ChangePhoneWindow.xaml">
+    <Page Include="View\ChangePhoneWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\BankAccWindow.xaml">
+    <Page Include="View\BankAccWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Repository.cs" />
+    <Compile Include="ViewModel\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -127,8 +133,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Events\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

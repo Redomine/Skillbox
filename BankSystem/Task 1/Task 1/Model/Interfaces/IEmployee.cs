@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task_1.Interfaces
 {
-    internal interface IEmployee
+    public interface IEmployee
     {
         string WorkerName { get; }
         string LevelOfAccess { get; }

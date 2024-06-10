@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using Task_1.Classes;
 using Task_1.Interfaces;
 using Task_1.Model;
+using Task_1.ViewModel;
 
 namespace Task_1.Windows
 {
@@ -23,6 +24,7 @@ namespace Task_1.Windows
     public partial class BankAccountWindow : Window
     {
         internal Repository data;
+        internal BankOperator bankOperator;
         internal BankAccountWindow(Repository mainData)
         {
             InitializeComponent();
@@ -31,30 +33,31 @@ namespace Task_1.Windows
             data.FillBankWindowData(this);
             data.CreateBoxes(this);
             data.BlockButtons(this);
+            bankOperator = new BankOperator(data);
         }
 
 
         private void OpenAcc(object sender, RoutedEventArgs e)
         {
-            data.OpenCloseAccount(this);
+            bankOperator.OpenCloseAccount(this);
             data.RefreshBankWindow(this);
         }
 
         private void CloseAcc(object sender, RoutedEventArgs e)
         {
-            data.OpenCloseAccount(this);
+            bankOperator.OpenCloseAccount(this);
             data.RefreshBankWindow(this);
         }
 
 
         private void AddMoney_Click(object sender, RoutedEventArgs e)
         {
-            data.AddMoney(this);
+            bankOperator.AddMoney(this);
         }
 
         private void Send_Money_Button(object sender, RoutedEventArgs e)
         {
-            data.SendMoney(this);
+            bankOperator.SendMoney(this);
         }
 
         private void TargetAccount_SelectionChanged(object sender, SelectionChangedEventArgs e)
