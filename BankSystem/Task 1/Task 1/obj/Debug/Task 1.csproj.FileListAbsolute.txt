@@ -90,3 +90,5 @@ C:\Users\mankaev_r\Desktop\GitHub\Skillbox\BankSystem\Task 1\Task 1\obj\Debug\Vi
 C:\Users\mankaev_r\Desktop\GitHub\Skillbox\BankSystem\Task 1\Task 1\obj\Debug\View\EditClientWindow.baml
 C:\Users\mankaev_r\Desktop\GitHub\Skillbox\BankSystem\Task 1\Task 1\obj\Debug\View\ChangePhoneWindow.baml
 C:\Users\mankaev_r\Desktop\GitHub\Skillbox\BankSystem\Task 1\Task 1\obj\Debug\View\BankAccWindow.baml
+C:\Users\mankaev_r\Desktop\GitHub\Skillbox\BankSystem\Task 1\Task 1\bin\Debug\BankClassLibrary.dll
+C:\Users\mankaev_r\Desktop\GitHub\Skillbox\BankSystem\Task 1\Task 1\bin\Debug\BankClassLibrary.pdb

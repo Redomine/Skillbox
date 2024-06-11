@@ -11,6 +11,7 @@ using Task_1.Windows;
 using Task_1.Model;
 using System.Collections.ObjectModel;
 using System.Windows.Forms;
+using BankClassLibrary.Exceptions;
 
 namespace Task_1.ViewModel
 {
@@ -56,7 +57,12 @@ namespace Task_1.ViewModel
             }
             else
             {
-                ShowErrorMessage();
+                try
+                {
+                    throw new ClientException("Должны быть заполнены все поля");
+                }
+                catch { }
+                
             }
         }
 
@@ -72,8 +78,13 @@ namespace Task_1.ViewModel
             string surName = newDialog.SurName.Text;
             string phoneNumber = newDialog.PhoneNumber.Text;
             string passportNumber = newDialog.PassportNumber.Text;
+            if (new[] { firstName, secondName, surName, phoneNumber, passportNumber }.All(x => x != "")) 
+            {
+                return true;
+            }
+            return false;
+            
 
-            return !((firstName ?? secondName ?? surName ?? phoneNumber ?? passportNumber) == "");
         }
 
         private Client CreateNewClient(EditClient newDialog, IEmployee worker)
@@ -117,7 +128,7 @@ namespace Task_1.ViewModel
                     ChangePhone newDialog = new ChangePhone();
                     repository.NewWindowAsDialog(mainWindow, newDialog);
                     //ChangePhoneNumber(newDialog, client, worker);
-                    accountClientFactory.EditPhone(newDialog, dbClient, worker);
+                    accountClientFactory.EditPhone(newDialog.currentNumber, dbClient, worker);
                     dbOperator.SerializeClientsToJson(repository.ClientsDb, repository.dbName);
                     repository.ClientsDb = dbOperator.DeserializeClientsFromJson<Client>(repository.dbName);
                 }

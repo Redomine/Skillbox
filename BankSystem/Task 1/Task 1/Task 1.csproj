@@ -60,13 +60,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Model\AccountClientFactory.cs" />
-    <Compile Include="Model\BankAccounts.cs" />
-    <Compile Include="Model\DbOperator.cs" />
-    <Compile Include="Model\MoneyExchanger.cs" />
-    <Compile Include="Model\Workers.cs" />
-    <Compile Include="Model\Interfaces\IEmployee.cs" />
-    <Compile Include="Model\Interfaces\IMoneyExchanger.cs" />
     <Compile Include="ViewModel\BankOperator.cs" />
     <Compile Include="ViewModel\ListSorter.cs" />
     <Compile Include="ViewModel\ClientOperator.cs" />
@@ -87,7 +80,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Model\Client.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -133,6 +125,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BankClassLibrary\BankClassLibrary.csproj">
+      <Project>{86079c55-d73e-4295-b28c-329e2aa393df}</Project>
+      <Name>BankClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

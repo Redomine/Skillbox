@@ -9,11 +9,12 @@ using Task_1.Interfaces;
 using Task_1.Model;
 using Task_1.Windows;
 
+
 namespace Task_1.ViewModel
 {
     internal class BankOperator
     {
-
+        
         internal Repository repository;
         internal DbOperator dbOperator;
         public BankOperator(Repository data)

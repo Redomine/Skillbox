@@ -20,6 +20,8 @@ namespace Task_1.Windows
     public partial class ChangePhone : Window
     {
         public bool changingNumber = false; //Меняем ли номер?
+        public string currentNumber;
+
         public ChangePhone()
         {
             InitializeComponent();
@@ -35,6 +37,7 @@ namespace Task_1.Windows
             else
             {
                 changingNumber = true;
+                currentNumber = PhoneNumber.Text;
                 Close();
             }
         }

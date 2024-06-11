@@ -12,7 +12,7 @@ namespace Task_1.Classes
 
     namespace Task_1_3
     {
-        internal class Client: INotifyPropertyChanged
+        public class Client: INotifyPropertyChanged
         {
             [JsonConstructor]
             public Client(

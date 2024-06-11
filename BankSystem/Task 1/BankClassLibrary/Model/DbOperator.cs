@@ -10,7 +10,7 @@ using Task_1.Classes.Task_1_3;
 
 namespace Task_1.Model
 {
-    internal class DbOperator
+    public class DbOperator
     {
         public ObservableCollection<T> DeserializeClientsFromJson<T>(string dbAdress)
         {

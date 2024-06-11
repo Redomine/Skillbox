@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 using Task_1.Classes.Task_1_3;
 using Task_1.Classes;
 using Task_1.Interfaces;
-using Task_1.Windows;
 
 namespace Task_1.Model
 {
-    internal class AccountClientFactory
+    public class AccountClientFactory
     {
         public delegate void AccountHandler(string message);
         public event AccountHandler Notify;
@@ -23,13 +22,11 @@ namespace Task_1.Model
 
         }
 
-        public void EditPhone(ChangePhone newDialog, Client dbClient, IEmployee worker)
+        public void EditPhone(string phoneNumber, Client dbClient, IEmployee worker)
         {
-
-
-            if (newDialog.PhoneNumber.Text != "")
+            if (phoneNumber != "")
             {
-                dbClient.PhoneNumber = newDialog.PhoneNumber.Text;
+                dbClient.PhoneNumber = phoneNumber;
                 dbClient.AutorOfChanges = worker.WorkerName;
                 dbClient.ChangesDate = DateTime.Now;
                 dbClient.NameOfChangedData = "PhoneNumber";

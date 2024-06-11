@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows;
 using Task_1.Classes;
 using Task_1.Interfaces;
 
 namespace Task_1.Model
 {
-    internal class MoneyExchanger : IMoneyExchanger<Account, string>
+    public class MoneyExchanger : IMoneyExchanger<Account, string>
     {
         public delegate void ExchangerHandler(string message);
         public event ExchangerHandler Notify;

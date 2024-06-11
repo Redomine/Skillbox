@@ -7,10 +7,10 @@ using Task_1.Interfaces;
 
 namespace Task_1.Classes
 {
-    internal class Workers
+    public class Workers
     {
 
-        internal class Worker : IEmployee
+        public class Worker : IEmployee
         {
 
             internal string levelOfAcces;
@@ -25,7 +25,7 @@ namespace Task_1.Classes
             }
         }
 
-        internal class Consultant : Worker
+        public class Consultant : Worker
         {
             public Consultant()
             {
@@ -34,7 +34,7 @@ namespace Task_1.Classes
             }
         }
 
-        internal class Manager : Worker
+        public class Manager : Worker
         {
             public Manager()
             {

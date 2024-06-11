@@ -1,0 +1,9 @@
+C:\Users\mankaev_r\Desktop\GitHub\Skillbox\BankSystem\Task 1\BankClassLibrary\obj\Debug\BankClassLibrary.csproj.AssemblyReference.cache
+C:\Users\mankaev_r\Desktop\GitHub\Skillbox\BankSystem\Task 1\BankClassLibrary\obj\Debug\BankClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\mankaev_r\Desktop\GitHub\Skillbox\BankSystem\Task 1\BankClassLibrary\bin\Debug\BankClassLibrary.dll
+C:\Users\mankaev_r\Desktop\GitHub\Skillbox\BankSystem\Task 1\BankClassLibrary\bin\Debug\BankClassLibrary.pdb
+C:\Users\mankaev_r\Desktop\GitHub\Skillbox\BankSystem\Task 1\BankClassLibrary\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mankaev_r\Desktop\GitHub\Skillbox\BankSystem\Task 1\BankClassLibrary\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mankaev_r\Desktop\GitHub\Skillbox\BankSystem\Task 1\BankClassLibrary\obj\Debug\BankClas.65FCEF8D.Up2Date
+C:\Users\mankaev_r\Desktop\GitHub\Skillbox\BankSystem\Task 1\BankClassLibrary\obj\Debug\BankClassLibrary.dll
+C:\Users\mankaev_r\Desktop\GitHub\Skillbox\BankSystem\Task 1\BankClassLibrary\obj\Debug\BankClassLibrary.pdb

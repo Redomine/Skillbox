@@ -7,17 +7,15 @@ using System.Net.Sockets;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using Task_1.Classes.Task_1_3;
 using Task_1.Interfaces;
-using Task_1.Windows;
 using static Task_1.Classes.Workers;
 
 namespace Task_1.Classes
 {
     
 
-    internal class Account
+    public class Account
     {
         public Account(int id, int moneyValue, bool isAccountOpen, string fullName)
         {
@@ -36,11 +34,11 @@ namespace Task_1.Classes
             this.FullName = fullName;
         }
 
-        internal int id;
-        internal int moneyValue;
-        internal bool isAccountOpen;
-        internal string fullName;
-        internal string accName;
+        public int id;
+        public int moneyValue;
+        public bool isAccountOpen;
+        public string fullName;
+        public string accName;
         public int Id { get { return id; } }
         public int MoneyValue { get { return moneyValue; } set { moneyValue = value; } }
         public bool IsAccountOpen { get { return isAccountOpen; } set { isAccountOpen = value; } }
@@ -56,7 +54,7 @@ namespace Task_1.Classes
 
     }
 
-    internal class ReguralBankAccount : Account
+    public class ReguralBankAccount : Account
     {
         [JsonConstructor]
         public ReguralBankAccount(int id, int moneyValue, bool isAccountOpen, string fullName) : base(id, moneyValue, isAccountOpen, fullName)
@@ -71,7 +69,7 @@ namespace Task_1.Classes
         }
     }
 
-    internal class DepositBankAccount : Account
+    public class DepositBankAccount : Account
     {
 
         [JsonConstructor]
